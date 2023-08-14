@@ -1,4 +1,4 @@
-# # Trying to make a quotation program for a business
+# Trying to make a quotation program for a business
 from tabulate import tabulate
 # Business infor
 busisness_infor = input("Enter your Business name, address, phone number, email and VAT number\nAll saparated by commas: ")
@@ -12,7 +12,7 @@ for j in customer_details:
 
 # Date, customer_ID and quote number 
 date = input("Enter date: ")
-CustomerID = input("Enter customer_ID: ")
+customerID = input("Enter customer_ID: ")
 quote = input("Enter Quotation number: ")
 
 #Items, qantity, price
@@ -24,4 +24,23 @@ for k in range(num_items):
     quantity = int(input("Quantity: "))
     price = int(input("Price: "))
     items.append([item,quantity,price])
-print(items)
+
+col_names = ["Description", "Quantity", "Price"]
+
+print("_________________________________________________________________________________________________________________")
+print("QUOTATION")
+for x in your_business:
+    print(x)
+
+print(f"Date: {date}")
+print(f"Quotation number: {quote}")
+print("==========================================================================================================================")
+print("Bill to:")
+for z in customer:
+    print(z)
+print(customerID)
+
+print(tabulate(items, headers=col_names, tablefmt="fancy_grid"))
+print("_________________________________________________________________________________________________________________")
+print("Thank you for you business")
+
